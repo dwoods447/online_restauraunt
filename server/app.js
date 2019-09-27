@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const config = require('./config/config');
+const path = require('path');
 const port = config.port;
 const app = express();
 // const mongoConnect = require('./utils/mongo-database.js').mongoConnect;
