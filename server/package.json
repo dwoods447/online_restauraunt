@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "seed": "node ./seeds"
+  },
+  "author": "Demaria Woods",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.5",
+    "cors": "^2.8.5",
+    "mongodb": "^3.3.2",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.2",
+    "pg": "^7.12.1",
+    "sequelize": "^5.18.4"
+  }
+}

@@ -1,0 +1,297 @@
+[{
+    "name": "Meatballs",
+    "type": "meat",
+    "price": "1.86",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Pepperoni",
+    "type": "meat",
+    "price": "1.70",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Beef",
+    "type": "meat",
+    "price": "1.39",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Canadian Bacon",
+    "type": "meat",
+    "price": "1.20",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Pepperoni Peppers",
+    "type": "meat",
+    "price": "1.70",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Shrimp",
+    "type": "meat",
+    "price": "1.22",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Steak",
+    "type": "meat",
+    "price": "1.50",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Bacon",
+    "type": "meat",
+    "price": "1.59",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Gyro Meat",
+    "type": "meat",
+    "price": "1.26",
+    "FoodCategoryId": 1
+  },
+  {
+    "name": "Kalamata Olives",
+    "type": "veggies",
+    "price": "1.38",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Caramelized Onions",
+    "type": "veggies",
+    "price": "1.97",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Green Olives",
+    "type": "veggies",
+    "price": "1.01",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Roasted Garlic",
+    "type": "veggies",
+    "price": "1.85",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Jalapeno Peppers",
+    "type": "veggies",
+    "price": "1.62",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Broccoli",
+    "type": "veggies",
+    "price": "1.40",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Fresh Mushrooms",
+    "type": "veggies",
+    "price": "1.31",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Green Peppers",
+    "type": "veggies",
+    "price": "1.88",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Hot Banana Peppers",
+    "type": "veggies",
+    "price": "1.05",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Red Onions",
+    "type": "veggies",
+    "price": "1.56",
+    "FoodCategoryId": 1
+  },
+  {
+    "name": "Marinara sauce",
+    "type": "sauces",
+    "price": "1.20",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Afredo sauce",
+    "type": "sauces",
+    "price": "1.87",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Ranch Sauce",
+    "type": "sauces",
+    "price": "1.32",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Sour Cream",
+    "type": "sauces",
+    "price": "1.24",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Butter garlic sauce",
+    "type": "sauces",
+    "price": "1.03",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Salsa",
+    "type": "sauces",
+    "price": "1.85",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Chipotle Sauce",
+    "type": "sauces",
+    "price": "1.76",
+    "FoodCategoryId": 1
+  }, {
+    "name": "Garlic Sauce",
+    "type": "sauces",
+    "price": "1.37",
+    "FoodCategoryId": 1
+  },
+  {
+    "name": "Meatballs",
+    "type": "meat",
+    "price": "1.86",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Pepperoni",
+    "type": "meat",
+    "price": "1.70",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Beef",
+    "type": "meat",
+    "price": "1.39",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Canadian Bacon",
+    "type": "meat",
+    "price": "1.20",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Pepperoni Peppers",
+    "type": "meat",
+    "price": "1.70",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Shrimp",
+    "type": "meat",
+    "price": "1.22",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Steak",
+    "type": "meat",
+    "price": "1.50",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Bacon",
+    "type": "meat",
+    "price": "1.59",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Gyro Meat",
+    "type": "meat",
+    "price": "1.26",
+    "FoodCategoryId": 2
+  },
+  {
+    "name": "Kalamata Olives",
+    "type": "veggies",
+    "price": "1.38",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Caramelized Onions",
+    "type": "veggies",
+    "price": "1.97",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Green Olives",
+    "type": "veggies",
+    "price": "1.01",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Roasted Garlic",
+    "type": "veggies",
+    "price": "1.85",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Jalapeno Peppers",
+    "type": "veggies",
+    "price": "1.62",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Broccoli",
+    "type": "veggies",
+    "price": "1.40",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Fresh Mushrooms",
+    "type": "veggies",
+    "price": "1.31",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Green Peppers",
+    "type": "veggies",
+    "price": "1.88",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Hot Banana Peppers",
+    "type": "veggies",
+    "price": "1.05",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Red Onions",
+    "type": "veggies",
+    "price": "1.56",
+    "FoodCategoryId": 2
+  },
+  {
+    "name": "Marinara sauce",
+    "type": "sauces",
+    "price": "1.20",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Afredo sauce",
+    "type": "sauces",
+    "price": "1.87",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Ranch Sauce",
+    "type": "sauces",
+    "price": "1.32",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Sour Cream",
+    "type": "sauces",
+    "price": "1.24",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Butter garlic sauce",
+    "type": "sauces",
+    "price": "1.03",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Salsa",
+    "type": "sauces",
+    "price": "1.85",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Chipotle Sauce",
+    "type": "sauces",
+    "price": "1.76",
+    "FoodCategoryId": 2
+  }, {
+    "name": "Garlic Sauce",
+    "type": "sauces",
+    "price": "1.37",
+    "FoodCategoryId": 2
+  },
+  {
+    "name": "Cheese",
+    "type": "cheese",
+     "price": "1.99",
+     "FoodCategoryId": 4
+  },
+  {
+    "name": "Fries",
+    "type": "fries",
+     "price": "1.40",
+     "FoodCategoryId": 6
+  },
+  {
+    "name": "Grilled Chicken",
+    "type": "grilled-chicken",
+     "price": "1.40",
+     "FoodCategoryId": 7
+  }
+  
+  
+]

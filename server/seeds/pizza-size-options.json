@@ -1,0 +1,17 @@
+[
+    {
+        "PizzaOptionsId": 1, 
+        "size": "Large",
+        "price":"15.99"
+    },
+    {
+        "PizzaOptionsId": 2, 
+        "size": "Medium",
+        "price":"12.99"
+    },
+    {
+        "PizzaOptionsId": 3, 
+        "size": "Small",
+        "price":"11.99"
+    }
+]

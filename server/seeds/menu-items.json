@@ -1,0 +1,444 @@
+[
+    {
+        
+        "item_name" : "Mama-Mia",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Ham, Italian Sausage, Ground Beef, Black Olives, Mushrooms & Mozzarella with Marinara ...",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/mama-mia.jpg",
+        "product_id": 1,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        
+        "item_name" : "Pizza Guy's Supreme",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Italian Sausage, Mushrooms, Green Peppers, Red Onions & Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386426/restraunt-app/pizza-supreme.jpg",
+        "product_id": 2,
+        "item_available": true,
+        "price": "12.99"
+        
+    },
+    {
+        
+        "item_name" : "The Classic Combo",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Italian Sausage, Mushrooms, Black Olives & Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386427/restraunt-app/The-Classic-Combo.jpg",
+        "product_id": 3,
+        "item_available": true,
+        "price": "12.99"
+   
+    },
+    {
+        
+        "item_name" : "Super Hawaiian",
+        "FoodCategoryId": 1,
+        "description": "Double Canadian Bacon, Double Pineapple & Double Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386427/restraunt-app/super-hawaiian.jpg",
+        "product_id": 4,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        
+        "item_name" : "All Meat",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Canadian Bacon, Italian Sausage, Cacon, Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/all-meat-pizza.jpg",
+        "product_id": 5,
+        "item_available": true,
+        "price": "12.99"
+    },{
+        
+        "item_name" : "Pepperoni Deluxe",
+        "FoodCategoryId": 1,
+        "description": "Double Pepperoni, Double Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/pepperoni-pizza.jpg",
+        "product_id": 6,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        
+        "item_name" : "Chef's Mistake",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Grilled Chicken, Grilled Steak, Bacon, Red Peppers & Mozzarella , Marinara Sauce topped with Fresh Cilantro",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/chef-mistake.jpg",
+        "product_id": 7,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        
+        "item_name" : "BBQ Combo",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Grilled Chicken, Bacon, Red Onions, Mozzarella with BBQ Sauce topped with Parsley",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/bbq-pulled-pizza.jpg",
+        "product_id": 8,
+        "item_available": true,
+        "price": "12.99"
+    },{
+        
+        "item_name" : "Pepperoni Supreme",
+        "FoodCategoryId": 1,
+        "description": "Pepperoni, Ham , Italian Sausage , Black Olives , Feta & Mozzarella with Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386426/restraunt-app/pepperoni-supreme.jpg",
+        "product_id": 9,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Margherita",
+        "FoodCategoryId": 2,
+        "description": "Tomatoes, Fresh Basil, Parmesan with Garlic Sauce.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/margherita.jpg",
+        "product_id": 10,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "3 or 4 Cheese",
+        "FoodCategoryId": 2,
+        "description": "Parmesan, Mozzarella and/ or feta with Marinara Sauce.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568386425/restraunt-app/cheese_pizza.jpg",
+        "product_id": 11,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Meal Deal 1",
+        "FoodCategoryId": 3,
+        "description": "1 Large Pizza, 1 Pasta, 2 L Soft Drink,",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659181/restraunt-app/Meal-Deal-1_0.jpg",
+        "product_id": 12,
+        "item_available": true,
+        "price": "21.90"
+    },
+    {
+        "item_name" : "Meal Deal 2",
+        "FoodCategoryId": 3,
+        "description": "1 Extra Large Pizza, 1 Pasta, 2L Soft Drink",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659181/restraunt-app/Meal-Deal-2_0.jpg",
+        "product_id": 13,
+        "item_available": true,
+        "price": "27.90"
+    },
+    {
+        "item_name" : "Meal Deal 3",
+        "FoodCategoryId": 3,
+        "description": "2 Large Pizza, 1 Pasta, 2 L Soft Drink",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659181/restraunt-app/Meal-Deal-3_0.jpg",
+        "product_id": 14,
+        "item_available": true,
+        "price": "40.90"
+    },
+    {
+        "item_name" : "Meal Deal 4",
+        "FoodCategoryId": 3,
+        "description": "2 Extra Large Pizza, 2 Pasta, 2L Soft Drink",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659181/restraunt-app/Meal-Deal-4.jpg",
+        "product_id": 15,
+        "item_available": true,
+        "price": "60.90"
+    },
+    {
+        "item_name" : "Breadsticks",
+        "FoodCategoryId": 4,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659370/restraunt-app/breadsticks.jpg",
+        "product_id": 16,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "Mozzarella Sticks",
+        "FoodCategoryId": 4,
+        "description": "5 sticks with a side of Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659371/restraunt-app/mozarella_sticks.jpg",
+        "product_id": 17,
+        "item_available": true,
+        "price": "3.49"
+    },
+    {
+        "item_name" : "Garlic Bread",
+        "FoodCategoryId": 4,
+        "description": "5 sticks with a side of Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659371/restraunt-app/garlic-bread.jpg",
+        "product_id": 18,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "French Fries",
+        "FoodCategoryId": 4,
+        "description": "5 sticks with a side of Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659370/restraunt-app/fries.jpg",
+        "product_id": 19,
+        "item_available": true,
+        "price": "1.99"
+    },
+    {
+        "item_name" : "Jalapeno Poppers",
+        "FoodCategoryId": 4,
+        "description": "5 poppers stuffed with a mixture of mixture of cheese & spices.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659370/restraunt-app/jalepeno-popers.jpg",
+        "product_id": 20,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "Vegetable Soup",
+        "FoodCategoryId": 5,
+        "description": "Hearty Vegetable and Bean Soup",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659987/restraunt-app/vegetable-soup.jpg",
+        "product_id": 21,
+        "item_available": true,
+        "price": "5.99"
+    },
+    {
+        "item_name" : "Chicken Soup",
+        "FoodCategoryId": 5,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568659987/restraunt-app/chicken-soup.jpg",
+        "product_id": 22,
+        "item_available": true,
+        "price": "7.99"
+    },
+    {
+        "item_name" : "Gyro Sandwich",
+        "FoodCategoryId": 6,
+        "description": "Sliced Lamb on a Pita Bread with Lettuce, Tomatoes, Red Onions & Tzajiki Sauce (mix of Yogurt, Ga...",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660184/restraunt-app/gyro-sandwiches.jpg",
+        "product_id": 23,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Chicken Gyro Sandwich",
+        "FoodCategoryId": 6,
+        "description": "Grilled Chicken on a Pita Bread with Lettuce, Tomatoes, Red Onions & Ranch dressing.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660184/restraunt-app/chicken-gyro-sandwich.jpg",
+        "product_id": 24,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Meatball Parmesan",
+        "FoodCategoryId": 6,
+        "description": "Meatballs with Shredded Parmesan, Mozzarella, & Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660184/restraunt-app/meat-ball-permesan.jpg",
+        "product_id": 25,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Italian Parmesan",
+        "FoodCategoryId": 6,
+        "description": "Pepperoni, Italian Susage, Shredded Parmesan, Mozzarella & Marinara Sauce",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660184/restraunt-app/italian-permesan.jpg",
+        "product_id": 26,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Ham & Cheese",
+        "FoodCategoryId": 6,
+        "description": "Ham with Mozzarella, Lettuce, Tomatoes & Mayonnaise",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660184/restraunt-app/ham-_-cheese-sandwich.jpg",
+        "product_id": 27,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Submarine",
+        "FoodCategoryId": 6,
+        "description": "Pepperoni, Ham, Mozzarella, Lettuce, Tomatoes & Mayonnaise",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660207/restraunt-app/submarine-sandwich.jpg",
+        "product_id": 28,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Dinner Salad",
+        "FoodCategoryId": 7,
+        "description": "Lettuce, Tomatoes & your choice of dressing",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660697/restraunt-app/dinner-salad.jpg",
+        "product_id": 29,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Classic Caesar",
+        "FoodCategoryId": 7,
+        "description": "Romaine Lettuce, Parmesan, Croutons tossed in Caesar dressing.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660697/restraunt-app/caesar-salad.jpg",
+        "product_id": 30,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Antipasto",
+        "FoodCategoryId": 7,
+        "description": "Lettuce, Pepperoni, Ham, Black Olives, Green Peppers, Onions, Tomatoes & Mozzarella",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660697/restraunt-app/antioasto-salad.jpg",
+        "product_id": 31,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Greek",
+        "FoodCategoryId": 7,
+        "description": "Lettuce, Black Olives, Green Peppers, Onions,Tomatoes & Feta Cheese",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660697/restraunt-app/greek-salad.jpg",
+        "product_id": 32,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Spinach Blue Cheese",
+        "FoodCategoryId": 7,
+        "description": "Spinach, Croutons, Cucumbers, Tomatoes,Onions & Blue Cheese dressing",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661771/restraunt-app/spinach-salad.jpg",
+        "product_id": 33,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Chicken Santa Fe",
+        "FoodCategoryId": 7,
+        "description": "Grilled Chicken, Romaine Lettuce,Tomatoes, Sour Cream, Salsa & Tortilla Chip",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568660697/restraunt-app/Chicken-Santa-Fe.jpg",
+        "product_id": 34,
+        "item_available": true,
+        "price": "12.99"
+    },
+    {
+        "item_name" : "Meat Lasagna",
+        "FoodCategoryId": 8,
+        "description": "Beef Lasagna served with Marinara sauce, Dinner salad and Garlic bread",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661002/restraunt-app/Meat-Lasagna-pasta.jpg",
+        "product_id": 35,
+        "item_available": true,
+        "price": "8.99"
+    },
+    {
+        "item_name" : "Fettucine Alfredo",
+        "FoodCategoryId": 8,
+        "description": "Chicken fettucine with Alfredo sauce, dinner salad and garlic bread",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661002/restraunt-app/Fettucine-Alfredo-pasta.jpg",
+        "product_id": 36,
+        "item_available": true,
+        "price": "8.99"
+    },
+    {
+        "item_name" : "Spaghetti",
+        "FoodCategoryId": 8,
+        "description": "Noodles with meatballs or Italian sausage in marinara sauce served with dinner salad and garlic b...",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661002/restraunt-app/Spaghetti-pasta.jpg",
+        "product_id": 37,
+        "item_available": true,
+        "price": "8.99"
+    },
+    {
+        "item_name" : "Penne Alfredo",
+        "FoodCategoryId": 8,
+        "description": "Chicken Penne pasta with Alfredo sauce served dinner salad and garlic bread",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661002/restraunt-app/Penne-Alfredo-pasta.jpg",
+        "product_id": 38,
+        "item_available": true,
+        "price": "8.99"
+    },
+    {
+        "item_name" : "Chocolate Moose Cake",
+        "FoodCategoryId": 9,
+        "description": "5 poppers stuffed with a mixture of mixture of cheese & spices.",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661118/restraunt-app/Chocolate-Moose-Cake.jpg",
+        "product_id": 39,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "Cinnamon Sticks",
+        "FoodCategoryId": 9,
+        "description": "Topped with Cinnamon & Sugar mix with icing on the side",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661118/restraunt-app/Cinnamon-Sticks.jpg",
+        "product_id": 40,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "Baklava",
+        "FoodCategoryId": 9,
+        "description": "Greek Dessert",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661118/restraunt-app/Baklava_0.jpg",
+        "product_id": 41,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "Blueberry Cheese Cake",
+        "FoodCategoryId": 9,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661118/restraunt-app/Blueberry-Cheese-Cake.jpg",
+        "product_id": 42,
+        "item_available": true,
+        "price": "3.99"
+    },
+    {
+        "item_name" : "2 LTR Coca Cola",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-Coca-Cola_0.jpg",
+        "product_id": 43,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "2 LTR Fanta",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-Fanta_0.jpg",
+        "product_id": 44,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "2 LTR Sprite",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-Sprite_0.jpg",
+        "product_id": 45,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "2 LTR Coke Zero",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-Coke-Zero_0.jpg",
+        "product_id": 46,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "2 LTR PIBB Xtra",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-PIBB-Xtra_0.jpg",
+        "product_id": 47,
+        "item_available": true,
+        "price": "2.99"
+    },
+    {
+        "item_name" : "2 LTR BARQS Root Beer",
+        "FoodCategoryId": 10,
+        "description": "",
+        "imageUrl": "https://res.cloudinary.com/dpwoods/image/upload/v1568661309/restraunt-app/2-LTR-BARQS-Root-Beer_0.jpg",
+        "product_id": 48,
+        "item_available": true,
+        "price": "2.99"
+    }
+   
+]
