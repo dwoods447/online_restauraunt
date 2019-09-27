@@ -1,0 +1,29 @@
+{
+  "name": "restaurant_order_app",
+  "version": "1.0.0",
+  "description": "This app will allow users to place food orders online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build-client && npm run install-server",
+    "build-project": "npm run build-client && npm run install-server",
+    "start": "node server/app.js",
+    "build-client": "cd ./client && npm install && npm run build",
+    "install-server": "cd ./server && npm install",
+    "seed": "node server/seeds/index.js"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwoods447/online_restauraunt.git"
+  },
+  "author": "Demaria Woods - Full Stack Developer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwoods447/online_restauraunt/issues"
+  },
+  "homepage": "https://github.com/dwoods447/online_restauraunt#readme",
+  "cacheDirectories": ["client/node_modules", "server/node_modules"]
+}
