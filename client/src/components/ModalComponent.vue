@@ -214,7 +214,9 @@
                 Vue.set(foodObj, 'options', this.options);
                 this.$store.dispatch('addToCartAction', foodObj);
                  this.$store.dispatch('calculateCartItems');
-                 if(this.options && this.$store.state.cart.length == 1){
+                 // If the cart was empty Check for the first time
+                 // If menu item added to cart includes options
+                 if(this.options.length > 0 && this.$store.state.cart.length == 1){
                    this.$store.dispatch('setInitialOptionPrice', this.options); 
                  }
                  this.$store.dispatch('calculateTotalCartProducts');
@@ -241,13 +243,13 @@
                      const cartItem  = this.$store.state.cart.find(item => item.item.id === food.id);
                     if(false){
                             if(cartItem.item.hasOwnProperty('options')){
-                                console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
-                                 console.log('and Has Options Object');
+                                // console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
+                                //  console.log('and Has Options Object');
                                     // cartItem['item']['options'].push(option);
                                     this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
                             } else {
-                                console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
-                                console.log('NO Options Object');
+                                // console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
+                                // console.log('NO Options Object');
                                  this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
                                 
                             }

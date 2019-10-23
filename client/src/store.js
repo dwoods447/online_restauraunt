@@ -194,6 +194,18 @@ const store = new Vuex.Store({
 
         getDisabledStatus(state){
             return state.isDisabled;
+        },
+        getOrderMethod(state){
+            return state.orderMethod;
+        },
+        getOrderPickUpDate(state){
+            return state.pickupDate;
+        },
+        getOrderPickUpTime(state){
+            return state.pickupTime;
+        },
+        getOrderDeliveryAddress(state){
+            return state.deliveryAddress;
         }
     }
 })

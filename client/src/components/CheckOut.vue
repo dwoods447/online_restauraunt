@@ -35,14 +35,14 @@
                                 Order Total:
                             </div>
                             <div class="col-lg-3" style="text-algin:center;">
-                                 <p style="margin-left: 50px; padding: 1em; text-algin:center; width: 35%;"> ${{this.$store.getters.getOrderTotal}}  </p>
+                                 <p style="margin-left: 50px; padding: 1em; text-algin:center; width: 35%;"> ${{this.$store.getters.getOrderTotal.toFixed(2)}}  </p>
                             </div>        
                         </div>
                     </b-card-body>
                 </b-card>
             </div>
        </div><!-- end of row -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-12">
                 <b-card no-body class="mb-1">
                     <b-card-header header-tag="header" class="p-1" role="tab">
@@ -58,7 +58,7 @@
                     </b-card-body>
                 </b-card>
             </div>
-       </div><!-- end of row -->
+       </div> -->
 
         <div class="row">
             <div class="col-lg-12">
@@ -69,16 +69,16 @@
                     <b-card-body>
                              <div class="row">
                             <div class="col-lg-6">
-                                <b-form-input placeholder="Enter your First Name"></b-form-input>
+                                <b-form-input placeholder="Enter your First Name" v-model="first_name"></b-form-input>
                             </div>
                              <div class="col-lg-6">
-                                <b-form-input placeholder="Enter your Last Name"></b-form-input>
+                                <b-form-input placeholder="Enter your Last Name" v-model="last_name"></b-form-input>
                             </div>
                         </div>
                         <br/>
                         <div class="row">
                              <div class="col-lg-6">
-                                <b-form-input  placeholder="Enter your Email"></b-form-input>
+                                <b-form-input  placeholder="Enter your Email" v-model="email"></b-form-input>
                             </div>
                              <div class="col-lg-6">
                               
@@ -88,19 +88,6 @@
                 </b-card>
             </div>
        </div><!-- end of row -->
-
-        <!-- <div class="row">
-            <div class="col-lg-12">
-                <b-card no-body class="mb-1">
-                    <b-card-header header-tag="header" class="p-1" role="tab">
-                        BILLING DETAILS
-                    </b-card-header>
-                    <b-card-body>
-                     
-                    </b-card-body>
-                </b-card>
-            </div>
-       </div> -->
 
           <div class="row">
             <div class="col-lg-6">
@@ -118,7 +105,7 @@
                            </div>
                            <div class="col-lg-6">
                                <ul>
-                                   <li><strong>Order total</strong>&nbsp;&nbsp;&nbsp;{{ this.$store.getters.getOrderTotal }}</li>
+                                   <li><strong>Order total</strong>&nbsp;&nbsp;&nbsp;{{ this.$store.getters.getOrderTotal.toFixed(2) }}</li>
                                </ul>
                            </div>
                        </div>
@@ -145,11 +132,11 @@
          <div class="row">
                 <div class="col-lg-4">
                      <button class="btn btn-danger"><router-link :to="{name: 'home'}">Cancel</router-link></button>
-                     <button class="btn btn-danger"><router-link :to="{name: 'home'}">Proceed</router-link></button>
+                     <button class="btn btn-danger" @click="orderMenuItems()">Place Order</button>
                      
                 </div> 
                 <div class="col-lg-8">
-                     <strong>Hitting 'Proceed' will take you back to the homepage.</strong>
+                     <!-- <strong>Hitting 'Proceed' will take you back to the homepage.</strong> -->
                 </div> 
          </div>    
        </div>
@@ -157,10 +144,26 @@
 </template>
 
 <script>
+import OrderService from '../services/OrderService.js'
     export default {
         mounted(){
-            console.log(`Shopping Cart${JSON.stringify(this.$store.getters.getCart, null, 2)}`);
+            this.order = {};
             this.items = this.$store.getters.getCart;
+            this.order_method = this.$store.getters.getOrderMethod;
+            this.orderTotal = this.$store.getters.getOrderTotal.toFixed(2);
+            this.addOnAmt = this.$store.getters.cartOptionsAmount.toFixed(2);
+            console.log(`order method ${JSON.stringify(this.order_method)}`)
+             if(this.order_method !==  ''){
+                    if(this.order_method === 'delivery'){
+                        this.delivery_address = this.$store.getters.getOrderDeliveryAddress;
+                        console.log(`Setting order method to deivery and address ${JSON.stringify(this.delivery_address)}`);
+                    }
+                    if(this.order_method === 'pickup'){
+                        this.pickupDate = this.$store.getters.getOrderPickUpDate;
+                        this.pickupTime = this.$store.getters.getOrderPickUpTime;
+                         console.log(`Setting order method to pickup date and time  ${JSON.stringify(this.pickupDate)} ${JSON.stringify(this.pickupTime)}`);
+                    }
+             }
         },
         data(){
             return {
@@ -168,7 +171,45 @@
                 items: [],
                 paymethod: '',
                 ordercomments: '',
+                first_name: '',
+                last_name: '',
+                email: '',
+                order_method: '',
+                delivery_address: '',
+                pickupDate: '',
+                pickupTime: '',
+                order: {},
+                orderTotal: 0,
+
             }
+        },
+        methods: {
+                async orderMenuItems(){
+                    this.order  = {
+                      customer: {
+                        firstname: this.first_name,
+                        lastname: this.last_name,
+                        email: this.email
+                      },
+                      payment_method:  this.paymethod,
+                      order_comments: this.ordercomments,
+                      orderTotal: this.orderTotal,
+                      menu_items: this.items,
+                      order_details: {
+                           order_method: this.order_method,
+                           pickupDate: this.pickupDate,
+                           pickupTime: this.pickupTime,
+                           delivery_address: this.delivery_address,
+                      },
+                      addOnAmt: this.addOnAmt
+                    }
+
+                    console.log(`Sending Order ${JSON.stringify(this.order, null, 2)}`);
+                    const ordersaved = (await OrderService.createOrder(this.order)).data.data
+                    if(ordersaved){
+                        console.log(`Returned from order soved without any errors ${ordersaved}`);
+                    }
+                }
         }
     }
 </script>

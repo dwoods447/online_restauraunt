@@ -63,7 +63,6 @@
         },
         methods:{
             openModal(modal){
-                console.log(`Opening Modal.. ${modal}`)
                 eventBus.$emit('openModal', modal);
             },
 
