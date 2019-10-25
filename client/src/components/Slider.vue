@@ -1,14 +1,16 @@
 <template>
     <div>
-         <div style="width: 50px; display: block; position: absolute;  left:15px; top 15px;"><span style="color: #fff; font-size: 1.2em;"  @click="slideBackward()"><i class="fas fa-chevron-circle-left"></i></span></div>
-         <div style="width: 50px; display: block; position: absolute;  right:15px; top 15px;"><span style="color: #fff; font-size: 1.2em;" @click="slideForward()"><i class="fas fa-chevron-circle-right"></i></span></div>
-        <div class="container" id="container">
-                <div class="slider-container" id="sliderContainer" data-slide="0" style="transform: translateX(0px); width: 2000px;" ref="slideContainer"> 
-                   
-                   <div class="inner">
-                       <div class="slider" v-for="(category, i) in categories" :key="i+'--'+category.category_name" :ref="'slide-'+i"><a :href="'#category-'+category.id" v-smooth-scroll style="color: #fff; text-decoration: underline;">{{ category.category_name }}</a></div>
-                    </div> 
-                </div>
+        <div id="sliderComponentContainer">
+                    <div style="width: 50px; display: block; position: absolute;  left:15px; top 15px;"><span style="color: #fff; font-size: 1.2em;"  @click="slideBackward()"><i class="fas fa-chevron-circle-left"></i></span></div>
+            <div style="width: 50px; display: block; position: absolute;  right:15px; top 15px;"><span style="color: #fff; font-size: 1.2em;" @click="slideForward()"><i class="fas fa-chevron-circle-right"></i></span></div>
+            <div class="container" id="container">
+                    <div class="slider-container" id="sliderContainer" data-slide="0" style="transform: translateX(0px); width: 2000px;" ref="slideContainer"> 
+                    
+                    <div class="inner">
+                        <div class="slider" v-for="(category, i) in categories" :key="i+'--'+category.category_name" :ref="'slide-'+i"><a :href="'#category-'+category.id" v-smooth-scroll style="color: #fff; text-decoration: underline;">{{ category.category_name }}</a></div>
+                        </div> 
+                    </div>
+            </div>
         </div>
     </div>
 </template>
@@ -84,7 +86,12 @@ import FoodCategoryService from '../services/FoodCategoryService'
         height: 50px;
         /* overflow: hidden; */
     }
-
+  
+   @media only screen and (max-width: 1690px){
+       #sliderComponentContainer{
+           display: none;
+       }
+   }
     /* #container::before{
         color: #ffffff;
         content: "\e251";
