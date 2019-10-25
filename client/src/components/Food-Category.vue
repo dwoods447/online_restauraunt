@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div role="tablist">
-                    <b-card no-body class="mb-1" v-for="category in categories" :key="category.id">
+                    <b-card no-body class="mb-1" v-for="(category, i) in filteredCategories" :key="category.id" :id="'category-'+category.id">
                         <b-card-header header-tag="header" class="p-1" role="tab">
                             <b-button block href="#" v-b-toggle="'accordion-' + category.id" variant="info">{{ category.category_name }}</b-button>
                        </b-card-header>
@@ -28,6 +28,7 @@
 import FoodCategoryService from '../services/FoodCategoryService'
 import MenuItem from '../components/MenuItem';
 import ModalComponent from '../components/ModalComponent'
+import { mapActions, mapGetters } from  'vuex'
 export default {
     components: {
        'menu-item': MenuItem,
@@ -51,8 +52,20 @@ export default {
             const foodcategories = (await FoodCategoryService.getFoodCategories()).data;
             if(foodcategories){
                 this.categories = foodcategories;
+                // console.log('Setting filtered Categories... ');
+                this.$store.dispatch('setFilteredFoodsCategoriesAction', this.categories);
             }
         }
+    },
+    computed: {
+         filteredCategories(){
+             try{
+                 let categories = (this.$store.getters.getFilteredCategories || this.$store.getters.getAllCategories);
+                 return categories;
+             } catch(e){
+                console.log('Error filtering Categories' + e)
+             }
+         }
     }
 }
 </script>

@@ -6,9 +6,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        cart: [
-
-        ],
+        cart: [],
         cartCount: '',
         addOnItems:[],
         deliveryAddress: '',
@@ -20,10 +18,40 @@ const store = new Vuex.Store({
         cartTotalAmount: 0,
         isDisabled: true,
 
+        searchValue: '',
+        filteredFoods: [],
+        allfoods:[],
+        filteredFoodsCategories: [],
+        allFoodCategories: [],
+        
       
 
     },
     mutations: {
+        setAllFoodsMutation(state, foods){
+            state.allfoods.push(foods);
+            state.filteredFoods.push(foods);
+        },
+        sendToFilteredCategoriesMutation(state, searchValue){
+                if(!(searchValue) || searchValue === '{}'){
+                    state.searchValue = null;
+                    state.filteredFoodsCategories = null;
+                } else {
+                    state.searchValue = searchValue;
+                    state.filteredFoodsCategories = state.allFoodCategories.filter((category)=> {
+                        return category.category_name.toLowerCase().includes(searchValue.toLowerCase());
+                    })
+                }
+        },
+        setFilteredFoodsMutation(state, foodArr){
+            state.filteredFoods.push(foodArr);
+        },
+        setFilteredFoodsCategoriesMutation(state, foodCats){
+            state.filteredFoods = [];
+            state.allFoodCategories = [];
+            state.filteredFoodsCategories = foodCats;
+            state.allFoodCategories = foodCats;
+        },
         setOrderMethodMutation(state, info){
             state.orderMethod = info.method;
 
@@ -60,7 +88,6 @@ const store = new Vuex.Store({
             state.cartCount++;
         },
         removeFromCartMutation(state, item){
-                console.log(`Removing item in cart at index ${JSON.stringify(item.index)}`);
                 state.cart.splice(item.index, 1);
                 if(state.cart.length  == 0){
                     state.isDisabled = true;
@@ -99,7 +126,6 @@ const store = new Vuex.Store({
              if(!itemInCart){
                 context.commit('addToCartMutation', cartItem);
              } else {
-                console.log(`Increasing Purchase Qty on ${JSON.stringify(cartItem)}`);
                 context.commit('increasePurchaseItemQtyOfCartItemMutation', itemInCartIndex);
              }
         },
@@ -115,7 +141,6 @@ const store = new Vuex.Store({
                context.commit('addToOptionsCartMutation', {option: cartItem});
               } else {
                   //Item already in cart add Options
-                  console.log(`Item in cart already`)
                   context.commit('addToOptionsCartMutation', {option: cartItem.option, index: itemInCartIndex});
                   
               }
@@ -126,13 +151,9 @@ const store = new Vuex.Store({
             const itemInCartIndex = context.state.cart.findIndex(item => item.id === cartItem.id);
               if(!itemInCart){
                // Not in cart
-               console.log(`Item NOT IN cart Editing cart...`);
-               console.log(`${JSON.stringify(cartItem, null, 2)}`);
                // context.commit('addToOptionsCartMutation', {option: cartItem});
               } else {
                   //Item already in cart add Options
-                  console.log(`Item in cart Editing cart...`);
-                  console.log(`${JSON.stringify(cartItem, null, 2)}`);
                   // context.commit('addToOptionsCartMutation', {option: cartItem.options, index: itemInCartIndex});
               }
         },
@@ -178,6 +199,19 @@ const store = new Vuex.Store({
         },
         decreasePurchaseItemQtyAction(context, cartItem){
             context.commit('decreasePurchaseItemQtyMutation', cartItem);
+        },
+
+        setFilteredFoodsAction(context, foodsArr){
+            context.commit('setFilteredFoodsMutation', foodsArr)
+        },
+        setAllFoodsAction(context, foodsArr){
+            context.commit('setAllFoodsMutation', foodsArr)
+        },
+        setFilteredFoodsCategoriesAction(context, foodsCats){
+            context.commit('setFilteredFoodsCategoriesMutation', foodsCats)
+        },
+        sendToFilteredCategoriesAction(context, searchValue){
+            context.commit('sendToFilteredCategoriesMutation', searchValue)
         }
 
     },
@@ -205,7 +239,19 @@ const store = new Vuex.Store({
             return state.pickupTime;
         },
         getOrderDeliveryAddress(state){
-            return state.deliveryAddress;
+            return state.deliveryAddress.text;
+        },
+        getFilteredFoods(state){
+            return state.filteredFoods;
+        },
+        getSearchTerm(state){
+            return state.searchValue;
+        },
+        getFilteredCategories(state){
+            return state.filteredFoodsCategories;
+        },
+        getAllCategories(state){
+            return state.allFoodCategories;
         }
     }
 })

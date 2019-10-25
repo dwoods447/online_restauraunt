@@ -99,8 +99,8 @@
                        <div class="row">
                            <div class="col-lg-6">
                                 <b-form-group label="Select a payment method from the following options.">
-                                <b-form-radio v-model="paymethod" name="payment" value="card">Card Payment</b-form-radio>
-                                <b-form-radio v-model="paymethod" name="payment" value="cash">Cash On Delivery</b-form-radio>
+                                <b-form-radio v-model="paymethod" name="payment" value="card" v-if="this.order_method === 'pickup'">Card Payment&nbsp;&nbsp;<span v-if="paymethod === 'card'" style="font-size: 0.7em; color: red;">disabled on demo</span></b-form-radio>
+                                <b-form-radio v-model="paymethod" name="payment" value="cash" v-if="this.order_method === 'delivery' || this.order_method === 'pickup'">Cash On Delivery</b-form-radio>
                                 </b-form-group>
                            </div>
                            <div class="col-lg-6">
@@ -151,7 +151,7 @@ import OrderService from '../services/OrderService.js'
             this.items = this.$store.getters.getCart;
             this.order_method = this.$store.getters.getOrderMethod;
             this.orderTotal = this.$store.getters.getOrderTotal.toFixed(2);
-            this.addOnAmt = this.$store.getters.cartOptionsAmount.toFixed(2);
+            this.addOnAmt = this.$store.getters.cartOptionsAmount
             console.log(`order method ${JSON.stringify(this.order_method)}`)
              if(this.order_method !==  ''){
                     if(this.order_method === 'delivery'){
@@ -204,10 +204,13 @@ import OrderService from '../services/OrderService.js'
                       addOnAmt: this.addOnAmt
                     }
 
-                    console.log(`Sending Order ${JSON.stringify(this.order, null, 2)}`);
-                    const ordersaved = (await OrderService.createOrder(this.order)).data.data
-                    if(ordersaved){
-                        console.log(`Returned from order soved without any errors ${ordersaved}`);
+                    // console.log(`Sending Order ${JSON.stringify(this.order, null, 2)}`);
+               
+                    const ordersaved = (await OrderService.createOrder(this.order)).data
+                    console.log(`Returned from order soved without any errors ${JSON.stringify(ordersaved)}`);
+                    if(ordersaved.status === 'success'){
+                        console.log(`Redirecting to thank you ${ordersaved}`);
+                        this.$router.push({name: 'thankyou', params: {order: this.order} });
                     }
                 }
         }

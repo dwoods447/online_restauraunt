@@ -59,6 +59,7 @@ v<template>
                 if(foodsInFoodCategory){
                     // console.log(`fOODS Returned: ${JSON.stringify(foodsInFoodCategory)}`);
                     this.foods = foodsInFoodCategory;
+                    this.$store.dispatch('setAllFoodsAction', this.foods[0]);
                 }
               
            } 
