@@ -2,7 +2,7 @@
 
 ## Overview
 
-The online italian restauraunt allows customer to place an order for their favorite dish. It uses Vue.jsa
+The online italian restauraunt allows customer to place an order for their favorite dish. It uses Vue.js
  with and Express.js back-end
 
 
