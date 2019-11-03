@@ -1,29 +1,41 @@
-# client
+![](http://demariawoods.com/images/slides/online-italian-restauraunt.gif)
 
-## Project setup
-```
-npm install
-```
+## Overview
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+The online italian restauraunt allows customer to place an order for their favorite dish. It uses Vue.jsa
+ with and Express.js back-end
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
+## Getting Started
+
+First install all the necessary dependencies:
 ```
-npm run test
+> npm build-project
+
 ```
 
-### Lints and fixes files
+Start the development front-end server (changes will now update live in browser):
 ```
-npm run lint
+> cd client
+
+> npm run serve
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Start the development back-end server :
+```
+> cd server
+
+> npm run start
+
+```
+
+
+To build the application for production:
+```
+> npm run build
+
+```
+
+To view the application on Heroku, go to: [https://online-italian-restauraunt.herokuapp.com/](https://online-italian-restauraunt.herokuapp.com/)
