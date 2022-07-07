@@ -18,7 +18,7 @@
     "core-js": "^2.6.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "pretty-checkbox": "^3.0.3",
     "vee-validate": "^3.0.4",
     "vue": "^2.6.10",
