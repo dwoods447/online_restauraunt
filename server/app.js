@@ -1,5 +1,4 @@
 const express = require('express');
-const morgan = require('morgan');
 const cors = require('cors');
 const config = require('./config/config');
 const path = require('path');
@@ -11,7 +10,7 @@ const bodyParser = require('body-parser');
 // const mongoConnect = require('./utils/mongo-database.js').mongoConnect;
 const {sequelize} = require('./models/sequelize');
 
-app.use(morgan('tiny'));
+
 app.use(cors());
 app.use(bodyParser.json());
 

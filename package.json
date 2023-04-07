@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run build-client && npm run install-server",
     "build-project": "npm run build-client && npm run install-server",
-    "start": "node server/app.js",
+    "start": "npm run build-client && npm run install-server",
     "build-client": "cd ./client && npm install && npm run build",
     "install-server": "cd ./server && npm install",
     "seed": "node server/seeds/index.js"
@@ -25,5 +25,8 @@
     "url": "https://github.com/dwoods447/online_restauraunt/issues"
   },
   "homepage": "https://github.com/dwoods447/online_restauraunt#readme",
-  "cacheDirectories": ["client/node_modules", "server/node_modules"]
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ]
 }
