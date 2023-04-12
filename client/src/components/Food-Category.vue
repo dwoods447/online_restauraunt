@@ -28,7 +28,6 @@
 import FoodCategoryService from '../services/FoodCategoryService'
 import MenuItem from '../components/MenuItem';
 import ModalComponent from '../components/ModalComponent'
-import { mapActions, mapGetters } from  'vuex'
 export default {
     components: {
        'menu-item': MenuItem,
@@ -52,7 +51,6 @@ export default {
             const foodcategories = (await FoodCategoryService.getFoodCategories()).data;
             if(foodcategories){
                 this.categories = foodcategories;
-                // console.log('Setting filtered Categories... ');
                 this.$store.dispatch('setFilteredFoodsCategoriesAction', this.categories);
             }
         }

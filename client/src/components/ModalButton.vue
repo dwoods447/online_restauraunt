@@ -11,7 +11,6 @@
 export default {
     props: ['category_id', 'food', 'foodInfo'],
     created(){
-        // this.getCategory();
     },
     data(){
         return {

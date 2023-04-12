@@ -152,16 +152,13 @@ import OrderService from '../services/OrderService.js'
             this.order_method = this.$store.getters.getOrderMethod;
             this.orderTotal = this.$store.getters.getOrderTotal.toFixed(2);
             this.addOnAmt = this.$store.getters.cartOptionsAmount
-            console.log(`order method ${JSON.stringify(this.order_method)}`)
              if(this.order_method !==  ''){
                     if(this.order_method === 'delivery'){
                         this.delivery_address = this.$store.getters.getOrderDeliveryAddress;
-                        console.log(`Setting order method to deivery and address ${JSON.stringify(this.delivery_address)}`);
                     }
                     if(this.order_method === 'pickup'){
                         this.pickupDate = this.$store.getters.getOrderPickUpDate;
                         this.pickupTime = this.$store.getters.getOrderPickUpTime;
-                         console.log(`Setting order method to pickup date and time  ${JSON.stringify(this.pickupDate)} ${JSON.stringify(this.pickupTime)}`);
                     }
              }
         },
@@ -207,9 +204,7 @@ import OrderService from '../services/OrderService.js'
                     // console.log(`Sending Order ${JSON.stringify(this.order, null, 2)}`);
                
                     const ordersaved = (await OrderService.createOrder(this.order)).data
-                    console.log(`Returned from order soved without any errors ${JSON.stringify(ordersaved)}`);
                     if(ordersaved.status === 'success'){
-                        console.log(`Redirecting to thank you ${ordersaved}`);
                         this.$router.push({name: 'thankyou', params: {order: this.order} });
                     }
                 }

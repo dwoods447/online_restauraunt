@@ -189,7 +189,6 @@ export default {
                 const addresses = (await AddressService.getAddress(query)).data.suggestions;
                 if(addresses !== null){
                     this.addresses = addresses;
-                     // console.log(`Address Returned: ${JSON.stringify(addresses)}`);
                 }
             }
         },

@@ -37,29 +37,21 @@ import FoodCategoryService from '../services/FoodCategoryService'
             },
 
             slideForward(){
-                console.log('Sliding Forward....');
-                console.log('Current Slide - ' + this.currentSlide);
                 if(this.currentSlide >=  5 || this.currentSlide >=  this.categories.length ){
-                     console.log('Current Slide int is great than length aborting...');
                     this.currentSlide = 0;
                     this.$refs.slideContainer.style.transform = "translateX("+(this.currentSlide*200)+"px)";
                     return false;
                 }
-                  console.log(`Sliding Forward this amt: ${(this.currentSlide*200)}px`);
                 this.$refs.slideContainer.style.transform = "translateX("+-(this.currentSlide*200)+"px)";
                 this.currentSlide++;
-                 console.log(`Adding from current slide`);
             },
             slideBackward(){
                 if(this.currentSlide < 0){
-                     console.log('Current Slide int is less than 0...');
                     this.currentSlide = 0;
                     this.$refs.slideContainer.style.transform = "translateX("+(this.currentSlide*200)+"px)";
                     return false;
                 }
-                console.log(`Sliding Backawrd this amt: ${-(this.currentSlide*200)}px`);
                 this.$refs.slideContainer.style.transform = "translateX("+(this.currentSlide*200)+"px)";
-                console.log(`Subtracting from current slide`);
                 this.currentSlide--;
                
             }

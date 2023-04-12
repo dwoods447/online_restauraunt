@@ -34,11 +34,9 @@ v<template>
 <script>
     import MenuItemService from '../services/MenuItemService'
     import ModalButton from '../components/ModalButton'
-    //import Price from '../components/Price'
     export default {
         props: ['category_id'],
         components: {
-        //  'price': Price
           'modal-button': ModalButton
         },
         created(){
@@ -57,7 +55,6 @@ v<template>
            async getFoods(){
                 const foodsInFoodCategory = (await MenuItemService.getFoodCategory(this.category_id)).data;
                 if(foodsInFoodCategory){
-                    // console.log(`fOODS Returned: ${JSON.stringify(foodsInFoodCategory)}`);
                     this.foods = foodsInFoodCategory;
                     this.$store.dispatch('setAllFoodsAction', this.foods[0]);
                 }

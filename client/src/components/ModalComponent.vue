@@ -189,7 +189,6 @@
                if(addOns){
                     let $this = this;
                     addOns.forEach(function(element) {
-                         // console.log(element);
                          if(element.type == "meat"){
                             $this.meats.push(element);   
                          }
@@ -243,13 +242,8 @@
                      const cartItem  = this.$store.state.cart.find(item => item.item.id === food.id);
                     if(false){
                             if(cartItem.item.hasOwnProperty('options')){
-                                // console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
-                                //  console.log('and Has Options Object');
-                                    // cartItem['item']['options'].push(option);
                                     this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
                             } else {
-                                // console.log(`Cart Item Found ${JSON.stringify(cartItem)}`);
-                                // console.log('NO Options Object');
                                  this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
                                 
                             }
