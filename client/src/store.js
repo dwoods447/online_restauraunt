@@ -155,14 +155,16 @@ const store = new Vuex.Store({
               } else {
                   //Item already in cart add Options
                   // context.commit('addToOptionsCartMutation', {option: cartItem.options, index: itemInCartIndex});
-              }
+            }
+            return itemInCartIndex
         },
         removeOptionFromCartItemAction(context, foodItem){
            
             const itemInCart = context.state.cart.find(item => item.id === foodItem.item.id);
             const itemInCartIndex = context.state.cart.findIndex(item => item.id === foodItem.item.id);
             const optionIndex = foodItem.index;
-            context.commit('removeOptionFromCartItemMutation', {foodItemIndex: itemInCartIndex, optionIndex: optionIndex});
+            context.commit('removeOptionFromCartItemMutation', { foodItemIndex: itemInCartIndex, optionIndex: optionIndex });
+            return itemInCart
         },
 
         setInitialOptionPrice(context, options){
@@ -181,7 +183,6 @@ const store = new Vuex.Store({
         },
 
         calculateCartOptions(context, item){
-            console.log(`Calculating ....  ${JSON.stringify(item)}`);
             const itemInCartIndex = context.state.cart.findIndex(item => item.id === item.item.id);
             let orderTotalCartOptions = 0;
             context.state.cart[itemInCartIndex].item.options.forEach((option)=>{
