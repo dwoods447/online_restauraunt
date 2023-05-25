@@ -8,8 +8,8 @@
     "heroku-postbuild": "npm run build-client && npm run install-server",
     "build": "npm run build-client && npm run install-server",
     "start": "npm run build && npm run install-server",
-    "build-client": "cd ./client && npm install && npm run build",
-    "install-server": "cd ./server && npm install",
+    "build-client": "cd /client && npm install && npm run build",
+    "install-server": "cd /server && npm install",
     "seed": "node server/seeds/index.js"
   },
   "engines": {
