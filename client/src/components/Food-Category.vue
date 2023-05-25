@@ -7,7 +7,7 @@
                         <b-card-header header-tag="header" class="p-1" role="tab">
                             <b-button block href="#" v-b-toggle="'accordion-' + category.id" variant="info">{{ category.category_name }}</b-button>
                        </b-card-header>
-                       <b-collapse :id="'accordion-'+ category.id" visible accordion="my-accordion" role="tabpanel">
+                       <b-collapse :id="'accordion-'+ category.id + i" visible accordion="my-accordion" role="tabpanel">
                         <b-card-body>
                             <menu-item :category_id="category.id"></menu-item>
                         </b-card-body>
@@ -56,13 +56,16 @@ export default {
         }
     },
     computed: {
-         filteredCategories(){
+        filteredCategories() {
+            let categories = []
              try{
-                 let categories = (this.$store.getters.getFilteredCategories || this.$store.getters.getAllCategories);
+              categories = (this.$store.getters.getFilteredCategories || this.$store.getters.getAllCategories);
                  return categories;
-             } catch(e){
-                console.log('Error filtering Categories' + e)
+             } catch(_){
+               // fail silenty
              }
+
+             return categories
          }
     }
 }

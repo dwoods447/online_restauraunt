@@ -15,7 +15,6 @@
     export default {
         mounted(){
             this.orderObj = this.$route.params.order;
-            console.log(`Order from route: ${ JSON.stringify(this.orderObj, null, 2)} `);
         },
         data(){
             return {

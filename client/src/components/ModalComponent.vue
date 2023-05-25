@@ -239,17 +239,18 @@
 
            addOptionToCartItem(food, option, index){
                if (option.checked) {
-                     const cartItem  = this.$store.state.cart.find(item => item.item.id === food.id);
-                    if(false){
-                            if(cartItem.item.hasOwnProperty('options')){
-                                    this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
-                            } else {
-                                 this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
-                                
-                            }
-                    } else {
-                            this.options.push(option);
-                    }
+                    //  const cartItem  = this.$store.state.cart.find(item => item.item.id === food.id);
+                    // if(false){
+                    //         if(cartItem.item.hasOwnProperty('options')){
+                    //                 this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
+                    //         } else {
+                    //              this.$store.dispatch('addOptionsToCartItem', {food: food, option: option});
+
+                    //         }
+                    // } else {
+                    //         this.options.push(option);
+                    // }
+                     this.options.push(option);
                } else {
                     this.removeOptionFromCartItem(food, option, index);
                     this.$store.dispatch('calculateCartOptions', index);
