@@ -12,19 +12,16 @@ const db = {};
 let sequelize;
 
 
-if(config.db.production.url !== undefined){
-    sequelize  = new Sequelize(config.db.production.url, { 
-        dialect: 'postgres' 
-    });
-} else {
-    // Sequielize connection
-   sequelize  = new Sequelize(
-    config.db.development.database, 
-    config.db.development.username, 
-    config.db.development.password,
-    config.db.development.dialect
-)
-}
+
+sequelize = new Sequelize(
+  config.db.database,
+  config.db.user,
+  config.db.password,
+  {
+    dialect: "mysql",
+    host: config.db.url,
+  }
+);
 
 
       // Loop through each file in the current directory excluding index.js and import model into empty db object
