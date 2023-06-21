@@ -1,7 +1,9 @@
+
+import 'dotenv/config'
 import axios from 'axios';
+console.log(process.env) // remove this after you've confirmed it is working
 const AxiosInstance = axios.create({
-     //baseURL: 'http://localhost:3000/',
-     baseURL: 'https://online-italian-restauraunt.herokuapp.com'
+     baseURL: process.env.baseURL || 'http://localhost:3000/'
 });
 
 export default AxiosInstance;

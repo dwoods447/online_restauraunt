@@ -1,4 +1,7 @@
-module.exports  = {
+
+require('dotenv').config()
+console.log(process.env)
+module.exports = {
   port: process.env.PORT || 3000,
   host: process.env.HOST,
     url: 'https://us-autocomplete.api.smartystreets.com',
@@ -19,7 +22,7 @@ module.exports  = {
             username: process.env.DB_USER,
             password: process.env.DB_PASS,
             database: process.env.DB_NAME,
-            dialect: "postgres"
+            dialect: "mysql"
         }
 
     }

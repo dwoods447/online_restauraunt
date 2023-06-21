@@ -1,4 +1,5 @@
-  
+require('dotenv').config()
+console.log(process.env)
 // Bring in sequelize module
 const Sequelize = require('sequelize');
 // Bring in path module
@@ -11,15 +12,15 @@ const config = require('../../config/config');
 const db = {};
 let sequelize;
 
-
+const basename = path.basename(__filename);
 
 sequelize = new Sequelize(
-  config.db.database,
-  config.db.user,
-  config.db.password,
+  config.db.production.database,
+  config.db.production.username,
+  config.db.production.password,
   {
+    host: config.db.production.url,
     dialect: "mysql",
-    host: config.db.url,
   }
 );
 
@@ -27,11 +28,17 @@ sequelize = new Sequelize(
       // Loop through each file in the current directory excluding index.js and import model into empty db object
         fs.readdirSync(__dirname)
         .filter((file)=>
-            file !== 'index.js'
+             file !== 'index.js'
         )
-        .forEach((file) => {
-            const model = sequelize.import(path.join(__dirname, file))
-            db[model.name] = model
+          .forEach((file) => {
+              const model = sequelize.import(path.join(__dirname, file));
+               db[model.name] = model;
+          // const model = require(path.join(__dirname, "/", file)).default(
+          //   sequelize,
+          //   Sequelize.DataTypes,
+          // )
+            // const model = require(path.join(__dirname, file)).default(sequelize, Sequelize.DataTypes);
+            // db[model.name] = model
         })
       
         

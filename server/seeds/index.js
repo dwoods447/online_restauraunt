@@ -46,8 +46,4 @@ sequelize.sync({force: true})
         })
     )
 
-
-    
-
-
 })

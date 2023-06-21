@@ -5,7 +5,5 @@ module.exports = (sequelize, DataTypes) => {
         }
     })
 
-   
-
     return FoodCategory;    
 }

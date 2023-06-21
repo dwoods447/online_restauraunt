@@ -1,5 +1,5 @@
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = function (sequelize, DataTypes)  {
     const AddOn = sequelize.define('AddOn', {
         name: {
             type: DataTypes.STRING,

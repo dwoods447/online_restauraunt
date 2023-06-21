@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = function(sequelize, DataTypes) {
     const Order = sequelize.define('Order', {
         order_date: {
             type: DataTypes.STRING,
@@ -17,8 +17,6 @@ module.exports = (sequelize, DataTypes) => {
         }
        
     })
-
-
    
     Order.associate = function(models){
         Order.belongsTo(models.Customer);

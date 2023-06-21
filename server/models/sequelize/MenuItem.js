@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports  = function (sequelize, DataTypes)  {
     const MenuItem = sequelize.define('MenuItem', {
         item_name: {
             type: DataTypes.STRING,

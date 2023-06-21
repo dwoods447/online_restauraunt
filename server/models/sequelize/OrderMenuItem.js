@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = function (sequelize, DataTypes) {
     const OrderMenuItem = sequelize.define('OrderMenuItem', {
         qty: {
             type: DataTypes.INTEGER   

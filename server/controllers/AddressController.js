@@ -1,10 +1,11 @@
 const config = require('../config/config');
-const fetch  = require('node-fetch');
+const axios = require('axios');
+
 module.exports = {
     async lookupAddress(req, res){
         try{
             const { address } = req.params;
-            const resp = await fetch(`${config.url}/suggest?auth-id=${config.auth_id}&auth-token=${config.auth_token}&prefix=${address}`);
+            const resp = await axios.get(`${config.url}/suggest?auth-id=${config.auth_id}&auth-token=${config.auth_token}&prefix=${address}`);
             const data = await resp.json();
             if(data.errors && data.errors.length > 0){
                 //address not found
