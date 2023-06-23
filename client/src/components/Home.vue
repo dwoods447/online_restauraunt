@@ -28,13 +28,13 @@
                 <div class="col-xs-12">
                     <div class="choose-container">
                         <label class="typo__label" for="ajax">Please Enter Your Address</label>
-                        <multiselect v-model="selectedAddresses" id="ajax" label="text" track-by="text" placeholder="Enter Your Address" open-direction="bottom" :options="addresses" :multiple="false" :searchable="true" :loading="isLoading" :internal-search="false" :clear-on-select="false" :close-on-select="true" :options-limit="300" :limit="3"  :max-height="600" :show-no-results="false" :hide-selected="true"  @search-change="asyncFind">
+                        <multiselect v-model="selectedAddresses" id="ajax" label="text" track-by="text" placeholder="Enter Your Address" open-direction="bottom" :options="addresses" :multiple="false" :searchable="true" :loading="isLoading" :internal-search="false" :clear-on-select="false" :close-on-select="true" :options-limit="300" :limit="3"  :max-height="600" :show-no-results="false" :hide-selected="true"  @search-change="asyncFind" disabled>
                             <template slot="tag" slot-scope="{ option, remove }"><span class="custom__tag"><span>{{ option.text }}</span><span class="custom__remove" @click="remove(option)">❌</span></span></template>
                             <template slot="clear" slot-scope="props">
                             <div class="multiselect__clear" v-if="selectedAddresses.length" @mousedown.prevent.stop="clearAll(props.search)"></div>
                             </template><span slot="noResult">Oops! No elements found. Consider changing the search query.</span>
                         </multiselect>
-
+                        <span style="color:white">This feature is currently unavailable. Sorry for inconvience</span>
                     </div>
                     <button class="btn btn-danger btn-custom" @click="selectedAddress()"><router-link :to="{name: 'menu'}">Continue</router-link></button>
                 </div>
