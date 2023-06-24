@@ -4,12 +4,9 @@
   "description": "This app will allow users to place food orders online",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run build-client && npm run install-server",
-    "build": "npm run build-client && npm run install-server && npm run start",
-    "start": "cd client && npm run build",
-    "build-client": "cd client && npm install && npm run build",
-    "install-server": "cd server && npm install",
+    "build": "npm run start-client && npm run start-server",
+    "start-client": "cd client && npm run start",
+    "start-server": "cd server && npm run start",
     "seed": "node server/seeds/index.js"
   },
   "engines": {
