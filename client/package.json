@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm install && npm run build"
+    "start": "npm install && npm run build && npm run serve"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

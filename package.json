@@ -4,7 +4,7 @@
   "description": "This app will allow users to place food orders online",
   "main": "index.js",
   "scripts": {
-    "build": "npm run start-server && npm run start-client",
+    "build": "npm run start-client && npm run start-server",
     "start-client": "cd client && npm run start",
     "start-server": "cd server && npm run start",
     "seed": "node server/seeds/index.js"

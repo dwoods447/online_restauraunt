@@ -1,8 +1,11 @@
 
-import 'dotenv/config'
 import axios from 'axios';
+// eslint-disable-next-line
+console.log(process.env)
+// eslint-disable-next-line
+console.log(process.env.VUE_APP_CLIENT_BASE)
 const AxiosInstance = axios.create({
-     baseURL: process.env.VUE_APP_BASE_URL || 'http://localhost:3000/'
+     baseURL: process.env.VUE_APP_CLIENT_BASE
 });
 
 export default AxiosInstance;
