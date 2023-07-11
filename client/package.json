@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && vue-cli-service serve",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm install && npm run serve"
+    "start": "npm install && npm run build"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
