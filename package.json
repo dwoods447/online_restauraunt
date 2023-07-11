@@ -2,7 +2,7 @@
   "name": "restaurant_order_app",
   "version": "1.0.0",
   "description": "This app will allow users to place food orders online",
-  "main": "index.js",
+  "main": "server/app.js",
   "scripts": {
     "build": "npm run start-client && npm run start-server",
     "start-client": "cd client && npm run start",
