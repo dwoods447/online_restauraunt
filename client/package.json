@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "start": "npm install && npm run build"
+    "start": "npm install && npm run serve"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
@@ -21,6 +21,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "moment": "^2.24.0",
     "pretty-checkbox": "^3.0.3",
+    "serve": "^14.2.0",
     "vee-validate": "^3.0.4",
     "vue": "^2.6.10",
     "vue-bootstrap-datetimepicker": "^5.0.1",
